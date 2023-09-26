@@ -1,16 +1,18 @@
 # Prompt customization
-# PS1='[\u@\h: \w]\$ ' 
+# PS1='[\u@\h: \w]\$ ' # Sometimes I prefer this more 
 PS1='\w \$ '
 
 # Variables
-export PATH="$PATH:~/.local/bin"
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+
 export XDG_SCREENSHOTS_DIR=~/Pictures/
 export LESSHISTFILE=-
 export HISTFILE=~/.bash_history
-export HISTSIZE=1000000000000000000000000000000000000000000
+export HISTSIZE=999999999999999999
 export RANGER_LOAD_DEFAULT_RC=false
-export VISUAL=nano
-export EDITOR=nano
+export VISUAL=nvim
+export EDITOR=nvim
 
 # Aliases
 alias ls='ls -A --color=auto'
@@ -23,8 +25,12 @@ alias vencord="sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/Ve
 alias rmshit='python3 ~/.local/bin/rmshit.py'
 alias pacsize="pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | paste - - | column -t | sort -nrk 2 | grep MiB | less"
 alias hyprland="Hyprland"
-alias hyprcfg="nano ~/.config/hypr/hyprland.conf"
-alias kittycfg="nano ~/.config/kitty/kitty.conf"
-alias dunstcfg="nano ~/.config/dunst/dunstrc"
+alias hyprcfg="nvim ~/.config/hypr/hyprland.conf"
+alias kittycfg="nvim ~/.config/kitty/kitty.conf"
+alias dunstcfg="nvim ~/.config/dunst/dunstrc"
+alias vim='nvim'
+alias wineclean="rm -f ~/.local/share/mime/packages/x-wine*; rm -f ~/.local/share/applications/wine-extension*; rm -f ~/.local/share/icons/hicolor/*/*/application-x-wine-extension*; rm -f ~/.local/share/mime/application/x-wine-extension*; echo 'cleaned :D'"
+alias nw='ping archlinux.org'
 
+# Startup
 neofetch
