@@ -1,11 +1,10 @@
-require("core.keymaps")
-require("core.plugins")
-require("core.plugin_config")
-require("core.options")
-
--- open nvim-tree on startup
-local function open_nvim_tree()
-    require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+require("core.plugin_config.catppuccin")
+require("core.plugin_config.lualine")
+require("core.plugin_config.nvim-tree")
+require("core.plugin_config.treesitter")
+require("core.plugin_config.telescope")
+require("core.plugin_config.lsp_config")
+require("core.plugin_config.coq")
+require("core.plugin_config.trouble")
+require("core.plugin_config.autopairs")
+require("core.plugin_config.bufferline")
