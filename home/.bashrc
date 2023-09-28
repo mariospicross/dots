@@ -18,7 +18,7 @@ export EDITOR=nvim
 alias ls='ls -A --color=auto'
 alias grep='grep --color=auto'
 alias paclist="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
-alias connect="ssh [UR_SSH_HERE]"
+alias connect="ssh orchid@192.168.1.202"
 alias neofetch='hyfetch --ascii-file ~/.config/neofetch/ascii.txt'
 alias password='python3 ~/.local/bin/password-generator.py -c 15'
 alias vencord="sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)""
@@ -29,8 +29,15 @@ alias hyprcfg="nvim ~/.config/hypr/hyprland.conf"
 alias kittycfg="nvim ~/.config/kitty/kitty.conf"
 alias dunstcfg="nvim ~/.config/dunst/dunstrc"
 alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
 alias wineclean="rm -f ~/.local/share/mime/packages/x-wine*; rm -f ~/.local/share/applications/wine-extension*; rm -f ~/.local/share/icons/hicolor/*/*/application-x-wine-extension*; rm -f ~/.local/share/mime/application/x-wine-extension*; echo 'cleaned :D'"
-alias nw='ping archlinux.org'
+alias p='ping'
+alias untar='tar -zxvf'
+eval "$(thefuck --alias)"
+alias vpn='mullvad'
+alias vpn-atl='mullvad relay set location us atl && mullvad reconnect'
+alias vpn-rag='mullvad relay set location us rag && mullvad reconnect'
 
 # Startup
 neofetch
