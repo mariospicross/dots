@@ -9,4 +9,5 @@ vim.opt.expandtab = true                                      -- use appropriate
 vim.opt.wrap = false                                          -- no text wrapping
 vim.opt.number = true                                         -- show line numbers
 vim.opt.ignorecase = true                                     -- ignores case when searching
-
+vim.opt.undofile = true                                       -- creates an undo file
+vim.opt.swapfile = false                                      -- stops creating annoying (imo) swapfile

@@ -18,17 +18,21 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons' -- icons
   use 'nvim-lualine/lualine.nvim' -- pretty line
   use 'nvim-treesitter/nvim-treesitter' -- syntax
+
   use 'ms-jpq/coq_nvim' -- completion
-  use 'ms-jpq/coq.artifacts' -- completion 2
+  use 'ms-jpq/coq.artifacts'
+
   use 'folke/trouble.nvim' -- diagnostics
   use 'windwp/nvim-autopairs' -- autopairs :D
   use 'akinsho/bufferline.nvim' -- tabs
+  use 'luckasRanarison/tree-sitter-hypr' -- hyprland syntax
+  use 'eandrju/cellular-automaton.nvim' -- makes me fill silly
 
   use { -- fuzzy finder
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- faster fzf for telescope
 
   use { -- lsps
     'williamboman/mason.nvim',

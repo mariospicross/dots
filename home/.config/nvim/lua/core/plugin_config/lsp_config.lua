@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "bashls", "cssls", "html", "prismals", "pkgbuild_language_server", "marksman", "pyright", "jdtls" }
+  ensure_installed = { "lua_ls", "bashls", "cssls", "html", "prismals", "pkgbuild_language_server", "marksman", "pyright", "jdtls", "tsserver" }
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<c-v>', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<c-a>', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', '<c-l>', require('telescope.builtin').lsp_references, opts)
-    vim.keymap.set('n', '<c-x>', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<leader>t', vim.lsp.buf.hover, opts)
   end,
 })
 
@@ -25,3 +25,4 @@ require("lspconfig").prismals.setup{}
 require("lspconfig").pkgbuild_language_server.setup{}
 require("lspconfig").marksman.setup{}
 require("lspconfig").pyright.setup{}
+require("lspconfig").tsserver.setup{}
