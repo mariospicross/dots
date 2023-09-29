@@ -5,11 +5,6 @@ alias wget='wget -c'
 alias connect="ssh orchid@192.168.1.202"
 alias neofetch='hyfetch --ascii-file ~/.config/neofetch/ascii.txt'
 
-alias ...="../.."
-alias ....="../../.."
-alias .....="../../../.."
-alias ......="../../../../.."
-
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
