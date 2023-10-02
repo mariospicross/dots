@@ -2,8 +2,10 @@ alias ls='ls -Al --color=auto'
 alias p='ping'
 alias untar='tar -zxvf'
 alias wget='wget -c'
-alias connect="ssh -t orchid@192.168.1.223"
 alias neofetch='hyfetch --ascii-file ~/.config/neofetch/ascii.txt'
+
+alias connect="ssh -t orchid@192.168.1.223"
+alias mount-vault="sudo sshfs -o allow_other,default_permissions,idmap=user orchid@192.168.1.223:/mnt/vault/ /mnt/vault/"
 
 alias nvi="nvim"
 alias vim='nvim'
