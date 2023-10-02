@@ -2,9 +2,10 @@ alias ls='ls -Al --color=auto'
 alias p='ping'
 alias untar='tar -zxvf'
 alias wget='wget -c'
-alias connect="ssh orchid@192.168.1.202"
+alias connect="ssh -t orchid@192.168.1.223"
 alias neofetch='hyfetch --ascii-file ~/.config/neofetch/ascii.txt'
 
+alias nvi="nvim"
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
@@ -20,9 +21,15 @@ alias aliascfg="$EDITOR ~/.config/fish/aliases.fish"
 alias bashcfg="$EDITOR ~/.bashrc"
 
 alias paclist="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
-alias pacsize="pacman -qi | egrep '^(name|installed)' | cut -f2 -d':' | paste - - | column -t | sort -nrk 2 | grep mib | less"
+alias pacsize="expac -H M '%m\t%n' | sort -h"
+alias pacclean="sudo pacman -Qtdq | ifne sudo pacman -Rns -"
+alias paccleanse="sudo pacman -Qqd | sudo pacman -Rsu -"
+alias paccacheclean="paccache -r k1 && yay -Sc --aur"
+alias paclog="pacolog"
 alias wineclean="rm -f ~/.local/share/mime/packages/x-wine*; rm -f ~/.local/share/applications/wine-extension*; rm -f ~/.local/share/icons/hicolor/*/*/application-x-wine-extension*; rm -f ~/.local/share/mime/application/x-wine-extension*; echo 'cleaned :D'"
+alias npmupdate="sudo npm-check -gu"
 
+alias unzipall="~/.local/bin/zipscript"
 alias password='python3 ~/.local/bin/password-generator.py -c 15'
 alias rmshit='python3 ~/.local/bin/rmshit.py'
 
