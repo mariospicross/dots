@@ -1,0 +1,41 @@
+* {
+	background-image: none;
+}
+window {
+	background-color: rgba(17, 17, 27, 0.6);
+}
+button {
+  color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 2px;
+  border-radius: 10px;
+  border-color: #313244;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 35%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: rgba(0, 0, 0, 0);
+	outline-style: none;
+  border-color: #6c7086;
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+}
+
+#sleep {
+    background-image: image(url("/home/orchid/.local/share/icons/moon.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+}
