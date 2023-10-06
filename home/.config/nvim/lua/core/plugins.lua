@@ -22,7 +22,6 @@ return require('packer').startup(function(use)
   use 'ms-jpq/coq_nvim' -- completion
   use 'ms-jpq/coq.artifacts'
 
-  use 'folke/trouble.nvim' -- diagnostics
   use 'windwp/nvim-autopairs' -- autopairs :D
   use 'akinsho/bufferline.nvim' -- tabs
   use 'luckasRanarison/tree-sitter-hypr' -- hyprland syntax
